@@ -21,13 +21,13 @@
                 default_layer {
                         bindings = <
 // |   TAB   |   Q   |   W   |   E   |   R   |   T   |  ||  |   Y   |   U   |   I   |   O   |   P   |   BKSP  |
- &lt TOP TAB   &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I   &kp O   &kp P   &kp BSPC
+ &lt RAISE TAB   &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I   &kp O   &kp P   &kp BSPC
 // |   LWR   |   A   |   S   |   D   |   F   |   G   |  ||  |   H   |   J   |   K   |   L   |   ;   |    '    |
  &mo LOWER     &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K   &kp L   &kp SEMI &kp SQT
 // |  SHFT   |   Z   |   X   |   C   |   V   |   B   |  ||  |   N   |   M   |   ,   |   .   |   /   |   ESC   |
  &kp LSHFT     &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
 //                        |   CTRL   |  LGUI  |  SPC  | ||  |   ENT   |   RSE   |   ALT   |
-                           &kp LCTRL &kp LGUI &kp SPACE      &kp RET   &mo RAISE  &kp RALT
+                           &kp LCTRL &kp LGUI &kp SPACE      &kp RET   &mo TOP  &kp RALT
                         >;
                 };
                 lower_layer {
@@ -42,6 +42,17 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  -  |  7  |  8  |  9  |  +  | BKSP |
+                        bindings = <
+   &trans    &kp N1   &kp N2 &kp N3 &kp N4 &kp N5                                &kp N6 &kp N7  &kp N8 &kp N9 &kp N0 &kp BSPC
+   &kp LCTRL &trans   &trans &kp C_VOL_DN  &kp C_VOL_UP &kp K_MUTE           &trans &trans &trans        &trans &trans &trans
+   &kp LSHFT &trans   &trans &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE     &trans &trans &trans        &trans &trans &trans
+                             &trans &trans   &trans                          &trans   &trans    &trans
+                        >;
+                };
+                
+                top_layer {
+// -----------------------------------------------------------------------------------------
 // |  TAB |  BRIGHT_UP  |  BRIGHT_DOWN  |  VOL_DOWN  |  VOL_UP  |  MUTE  |      |  -  |  7  |  8  |  9  |  +  | BKSP |
 // | CTRL |             |               |             |         |        |      |  .  |  4  |  5  |  6  |  -  |  `   |
 // | SHFT |             |              |             |          |        |      |  0  |  1  |  2  |  3  |  *  |  /   |
@@ -51,17 +62,6 @@
    &kp LCTRL &trans   &trans &trans   &trans   &trans                             &kp KP_DOT &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS    &kp GRAVE
    &kp LSHFT &out OUT_BLE &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY &kp KP_DIVIDE
                                    &trans &trans   &trans         &trans   &trans    &trans
-                        >;
-                };
-                
-                top_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  -  |  7  |  8  |  9  |  +  | BKSP |
-                        bindings = <
-   &trans    &kp N1   &kp N2 &kp N3 &kp N4 &kp N5                                &kp N6 &kp N7  &kp N8 &kp N9 &kp N0 &kp BSPC
-   &kp LCTRL &trans   &trans &kp C_VOL_DN  &kp C_VOL_UP &kp K_MUTE           &trans &trans &trans        &trans &trans &trans
-   &kp LSHFT &trans   &trans &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE     &trans &trans &trans        &trans &trans &trans
-                             &trans &trans   &trans                          &trans   &trans    &trans
                         >;
                 };
         };
