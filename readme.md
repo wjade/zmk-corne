@@ -1,17 +1,29 @@
 # Armno's ZMK firmware
 
-ZMK firware for my Corne wireless split keyboard.
+ZMK firware for my Corne wireless split keyboard with nice!nano controllers.
 
-Steps to update the keymaps (A note to myself. I always forget this.)
+## Keymaps
+
+![layer 0](./screenshots/zmk-l0.png)
+
+![layer 1](./screenshots/zmk-l1.png)
+
+![layer 2](./screenshots/zmk-l2.png)
+
+![layer 3](./screenshots/zmk-l3.png)
+
+Steps to update the keymaps (which I always forget).
 
 - Make changes in `corne.keymap` using [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) and push to github
 - Wait for [GitHub Actions](https://github.com/armno/zmk-config/actions) to finish the build. Then download the artifacts.
 - Connect the left keyboard to the computur via USB. **Use a proper USB-C cable** and not the magnetic one.
-- Use a tweezer to short circuit `RST` and `GND` pins. When success, there should be a storage drive named `NICENANO` shows up in the Finder.
-- Copy the left firmware to the NICENANO storage. When success, the storage will be automatically unmounted.
-- Repeat steps for the right keyboard.
+- Use a tweezer to short circuit `RST` and `GND` pins (see the pictures below). When success, there should be a storage drive named `NICENANO` shows up in the Finder.
+- Copy the left firmware to the `NICENANO` storage. When success, the storage will be automatically unmounted.
+- Repeat steps for the right side keyboard.
 
 ![pins](./pins.jpg)
+
+## Troubleshooting
 
 ### 2 parts unable to pair
 
