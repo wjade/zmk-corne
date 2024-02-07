@@ -21,6 +21,8 @@ Steps to update the keymaps (which I always forget).
 - Copy the left firmware to the `NICENANO` storage. When success, the storage will be automatically unmounted.
 - Repeat steps for the right side keyboard.
 
+![pins](./pins-top.jpg)
+
 ![pins](./pins.jpg)
 
 ## Troubleshooting
