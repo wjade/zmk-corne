@@ -20,7 +20,7 @@
 
         lang {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <12 23>;
+            key-positions = <17 18>;
         };
     };
 
