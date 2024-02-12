@@ -15,6 +15,15 @@
 #define TOP     3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        lang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <24 35>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
