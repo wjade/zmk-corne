@@ -1,6 +1,6 @@
-# Armno's ZMK firmware
+# ZMK firmware for Wireless Corne
 
-ZMK firware for my Corne wireless split keyboard with nice!nano controllers.
+ZMK firware for my wireless Corne split keyboard with nice!nano controllers.
 
 ## Keymaps
 
@@ -32,4 +32,3 @@ Steps to update the keymaps (which I always forget).
 
 Most likely I'll need to fix it with the reset firmware. See https://zmk.dev/docs/troubleshooting#split-keyboard-halves-unable-to-pair
 
-The left keyboard's switch is also not very good. Better leave if on all the time.
