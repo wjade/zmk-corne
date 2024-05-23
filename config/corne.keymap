@@ -35,6 +35,78 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
         };
+
+        ee: ee {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EE";
+            bindings = <&kp E>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        rr: rr {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RR";
+            bindings = <&kp R>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        tt: tt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TT";
+            bindings = <&kp T>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        yy: yy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "YY";
+            bindings = <&kp Y>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        uu: uu {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UU";
+            bindings = <&kp U>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        ii: ii {
+            compatible = "zmk,behavior-mod-morph";
+            label = "II";
+            bindings = <&kp I>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        oo: oo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OO";
+            bindings = <&kp O>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
+
+        pp: pp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PP";
+            bindings = <&kp P>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -42,7 +114,7 @@
 
         default_layer {
             bindings = <
-&lt RAISE TAB         &qq    &kp W  &kp E      &kp R     &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P     &kp BSPC
+&lt RAISE TAB         &qq    &ww    &ee        &rr       &tt          &yy      &uu      &ii        &oo      &pp       &kp BSPC
 &kp LS(LA(LC(LGUI)))  &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT             &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                                     &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo TOP  &kp RALT
