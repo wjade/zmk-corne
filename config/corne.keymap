@@ -114,10 +114,10 @@
 
         default_layer {
             bindings = <
-&lt RAISE TAB         &qq    &ww    &ee        &rr       &tt          &yy      &uu      &ii        &oo      &pp       &kp BSPC
-&kp LS(LA(LC(LGUI)))  &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT             &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                    &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo TOP  &kp RALT
+&lt RAISE TAB                    &qq    &ww    &ee        &rr       &tt          &yy      &uu      &ii        &oo      &pp       &kp BSPC
+&mt LS(LA(LC(LEFT_GUI))) ESCAPE  &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT                        &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                               &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo TOP  &kp RALT
             >;
         };
 
