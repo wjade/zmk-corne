@@ -109,6 +109,15 @@
         };
     };
 
+    macros {
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(N4)) &kp LG(LS(N4))>;
+            label = "SCREENSHOT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -142,6 +151,15 @@
 &trans     &trans        &trans        &trans        &rgb_ug RGB_TOG  &bl BL_TOG    &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS     &trans         &trans
 &kp LSHFT  &trans        &trans        &trans        &trans           &trans        &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans
                                        &kp LCTRL     &kp LEFT_GUI     &trans        &kp KP_N0  &trans     &kp KP_DOT
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
