@@ -107,13 +107,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_LGUI)>;
         };
+
+        shift_screenshot: shift_screenshot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_SCREENSHOT";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&screenshot>;
+        };
     };
 
     macros {
         screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(N4)) &kp LG(LS(N4))>;
+            bindings = <&kp LG(LS(N4))>;
             label = "SCREENSHOT";
         };
     };
@@ -123,10 +130,10 @@
 
         default_layer {
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                                &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB            &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_CONTROL   &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&shift_screenshot  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
+                                 &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
