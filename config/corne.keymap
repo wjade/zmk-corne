@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
@@ -130,19 +131,19 @@
 
         default_layer {
             bindings = <
-&kp TAB            &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_CONTROL   &kp A  &kp S  &kp D      &kp F     &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&shift_screenshot  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                                 &kp LCTRL  &kp LGUI  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB            &kp Q  &kp W  &kp E      &kp R     &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_CONTROL   &kp A  &kp S  &kp D      &lt 1 F   &mt LS(G) G    &mt RS(H) H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&shift_screenshot  &kp Z  &kp X  &kp C      &kp V     &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
+                                 &kp LCTRL  &kp LGUI  &kp SPACE      &kp RET      &mo 2  &kp RALT
             >;
         };
 
         lower_layer {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DLLR      &kp PRCNT           &kp CARET  &kp AMPS   &kp STAR        &kp LPAR         &kp RPAR  &kp DEL
-&trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE          &kp LEFT   &kp DOWN   &kp UP          &kp RIGHT        &kp LBKT  &kp GRAVE
-&kp LSHFT  &trans    &trans       &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE    &kp MINUS  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BSLH  &trans
-                                  &trans        &trans        &trans              &trans     &trans     &trans
+&kp TAB    &kp NUMBER_1  &kp N2  &kp N3        &kp N4        &kp N5              &kp N6    &kp N7    &kp N8       &kp N9         &kp N0    &kp DEL
+&trans     &trans        &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE          &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT      &kp LBKT  &kp GRAVE
+&kp LSHFT  &trans        &trans  &kp C_PREV    &kp C_NEXT    &kp C_PLAY_PAUSE    &kp HOME  &kp END   &kp PAGE_UP  &kp PAGE_DOWN  &kp BSLH  &trans
+                                 &trans        &trans        &trans              &trans    &trans    &trans
             >;
         };
 
@@ -154,19 +155,19 @@
             //                      |              |             |          |         |     |     |     |
 
             bindings = <
-&trans     &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_VOL_UP     &kp K_MUTE    &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS      &trans         &kp BSPC
-&trans     &trans        &trans        &trans        &rgb_ug RGB_TOG  &bl BL_TOG    &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS     &trans         &trans
-&kp LSHFT  &trans        &trans        &trans        &trans           &trans        &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans
-                                       &kp LCTRL     &kp LEFT_GUI     &trans        &kp KP_N0  &trans     &kp KP_DOT
+&trans     &kp LS(NUMBER_1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)       &kp LS(N5)    &kp RS(N6)      &kp RS(N7)  &kp RS(N8)        &kp RS(N0)         &trans         &kp BSPC
+&trans     &trans            &trans      &trans      &rgb_ug RGB_TOG  &bl BL_TOG    &kp MINUS       &kp EQUAL   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
+&kp LSHFT  &trans            &trans      &trans      &trans           &trans        &kp UNDERSCORE  &kp PLUS    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp KP_DIVIDE  &trans
+                                         &kp LCTRL   &kp LEFT_GUI     &trans        &kp KP_N0       &trans      &kp KP_DOT
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans  &trans  &trans    &mkp LCLK       &trans          &trans
             >;
         };
     };
