@@ -20,6 +20,43 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
+        // Custom mod-tap behavior optimized for fast typing
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;  // Increased for fast typing
+            quick-tap-ms = <150>;     // Allows quick re-taps
+            require-prior-idle-ms = <150>;  // Prevents accidental triggers
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Custom layer-tap behavior for fast typing
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;  // Increased timeout
+            quick-tap-ms = <200>;     // Generous quick-tap window
+            require-prior-idle-ms = <150>;  // Prevents accidental triggers
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Custom mod-tap for Space/Enter with Shift
+        mt_fast: mod_tap_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_FAST";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;  // Long timeout for fast typing
+            quick-tap-ms = <200>;     // Quick space/enter repeats
+            require-prior-idle-ms = <125>;  // Prevent accidental shifts
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0>;  // Only trigger on intentional holds
+        };
+
         qq: qq {
             compatible = "zmk,behavior-mod-morph";
             label = "QQ";
@@ -135,7 +172,7 @@
 &kp TAB            &kp Q  &kp W    &kp E      &kp R     &kp T                   &kp Y                  &kp U    &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_CONTROL   &kp A  &lt 3 S  &lt 2 D    &lt 1 F   &kp G                   &kp H                  &lt 1 J  &lt 2 K    &lt 3 L  &kp SEMI  &kp SQT
 &shift_screenshot  &kp Z  &kp X    &kp C      &kp V     &kp B                   &kp N                  &kp M    &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                                   &kp LCTRL  &kp LGUI  &mt LEFT_SHIFT ENTER    &mt RIGHT_SHIFT SPACE  &mo 2    &kp RALT
+                                   &kp LCTRL  &kp LGUI  &mt_fast LEFT_SHIFT ENTER    &mt_fast RIGHT_SHIFT SPACE  &mo 2    &kp RALT
             >;
         };
 
